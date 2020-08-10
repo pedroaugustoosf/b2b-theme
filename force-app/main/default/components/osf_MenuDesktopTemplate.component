@@ -1,0 +1,109 @@
+<apex:component>
+  <script id="osf_MenuDesktopTemplate" type="text/template">
+    <div id="secnav cc_secnav" class="cc_secnav">
+      <nav class="navbar navbar-static-top cc_navbar">
+        <div class="navbar-header cc_navbar_header">
+          <button type="button" class="navbar-toggle collapsed cc_navbar_toggle" data-toggle="collapse"
+                  data-target="#navbar"
+                  aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">{{pageLabelMap 'Menu_ToggleNavigation'}}</span>
+            <span class="icon-bar cc_icon-bar"></span>
+            <span class="icon-bar cc_icon-bar"></span>
+            <span class="icon-bar cc_icon-bar"></span>
+          </button>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse cc_navbar_collapse">
+          
+          <ul class="nav navbar-nav cc_navbar-nav">
+            {{#each .}}
+              {{#if children}}
+                <li class="dropdown cc_dropdown">
+                  <a href="{{linkURL}}" class="dropdown-toggle cc_dropdown_toggle" data-toggle="dropdown"
+                     data-menuid="{{menuId}}" {{linkTarget openInNewWindow}} role="button" aria-haspopup="true"
+                     aria-expanded="false">{{displayName}}<span class="caret"></span></a>
+                  <ul class="dropdown-menu cc_dropdown-menu">
+                    {{> subMenuItem}}
+                  </ul>
+                </li>
+              {{else}}
+                {{#ifEquals mType 'Category'}}
+                  <li class="dropdown cc_dropdown">{{categoryLink this 'cc_category' text=displayName}}</li>
+                {{/ifEquals}}
+                {{#ifEquals mType 'Product'}}
+                  <li class="dropdown cc_dropdown">{{productLink this 'cc_product' text=displayName}}</li>
+                {{/ifEquals}}
+                {{#ifEquals mType 'URL'}}
+                  <li class="dropdown cc_dropdown"><a class="menuTypeURL cc_menu_type_url" href="{{linkURL}}"
+                                                      data-href="{{linkURL}}" data-menuid="{{menuId}}" {{linkTarget
+                      openInNewWindow}}>{{displayName}}</a></li>
+                {{/ifEquals}}
+                {{#ifEquals mType 'None'}}
+                  <li class="dropdown cc_dropdown"><a href="javascript:void(0);" class="cc_display_name"
+                                                      data-menuid="{{menuId}}">{{displayName}}</a></li>
+                {{/ifEquals}}
+              {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </script>
+
+  <script id="osf_EffAcctSel-Head-View-Desktop" type="text/template">
+        <ul class="list-inline navbar-nav cc_navbar-nav">
+            {{#if this.ro}}
+            <li class="effAccount cc_eff_account">
+                <a href="#">
+                    {{stripTags (pageLabelMap 'SELECTED_ACCOUNT' workingEffAccount.name workingEffAccount.accountNumber workingEffAccount.shippingAddress.address1 workingEffAccount.shippingAddress.city workingEffAccount.shippingAddress.state workingEffAccount.shippingAddress.countryCode) }}
+                </a>
+            </li>
+            {{else}}
+            <li class="effAccount cc_eff_account" data-toggle="modal" data-target="#effAccounts">
+                <a href="#">
+                    {{#if this.workingEffAccount }}
+                    {{stripTags (pageLabelMap 'SELECTED_ACCOUNT' workingEffAccount.name workingEffAccount.accountNumber workingEffAccount.shippingAddress.address1 workingEffAccount.shippingAddress.city workingEffAccount.shippingAddress.state workingEffAccount.shippingAddress.countryCode)}}
+                    {{else}}
+                    {{pageLabelMap 'SELECT_ACCOUNT' }}
+                    {{/if}}
+                    <span class="launchSel cc_launch_sel" aria-hidden="true"></span>
+                </a>
+            </li>
+            {{/if}}
+        </ul>
+        <div class="modal fade cc_modal cc_effective_accounts_modal" id="effAccounts" tabindex="-1" role="dialog" aria-labelledby="effAccountsLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content cc_modal_content">
+                    <div class="modal-header cc_modal_header">
+                        <button type="button" class="close cc_close" data-dismiss="modal" aria-label="{{pageLabelMap 'Modal_Aria_Close'}}"><span aria-hidden="true">&#215;</span></button>
+                        <h4 class="modal-title cc_modal_title" id="effAccountsLabel">{{pageLabelMap 'EFFECTIVE_ACCOUNT_TITLE'}}</h4>
+                    </div>
+                    <div class="modal-body cc_modal_body">
+                        <div class="table-responsive effaccountTable">
+                            <table class="table table-hover cc_table">
+                                <thead class="cc_thead">
+                                <tr class="cc_tr">
+                                    <th class="cc_th_name">{{pageLabelMap 'Name'}}</th>
+                                    <th class="cc_th_account_number">{{pageLabelMap 'ACCOUNT_NUMBER'}}</th>
+                                    <th class="cc_th_address">{{pageLabelMap 'Address'}}</th>
+                                    <th class="cc_th_picked"></th>
+                                </tr>
+                                </thead>
+                                <tbody class="cc_tbody">
+                                {{#each this.effectiveList}}
+                                <tr class="cc_tr_values pickAccount" data-id="{{sfid}}" >
+                                    <td class="cc_td_name">{{{name}}}</td>
+                                    <td class="cc_td_account_number">{{accountNumber}}</td>
+                                    <td class="cc_td_address">{{pageLabelMap 'ADDRESS_FORMAT' shippingAddress.address1 shippingAddress.city shippingAddress.state shippingAddress.postalCode shippingAddress.countryCode}}</td>
+                                    <td><a href="#"><i class="pickSel cc_pick_account fa fa-chevron-right" data-id="{{sfid}}" aria-hidden="true"></i><span class="sr-only">{{pageLabelMap 'EffectiveAccount_SelectAccount'}}</span></a></td>
+                                </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
+</apex:component>

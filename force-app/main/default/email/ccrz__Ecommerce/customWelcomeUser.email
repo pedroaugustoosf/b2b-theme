@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta name="x-apple-disable-message-reformatting">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="format-detection" content="telephone=no"> <meta name="format-detection" content="date=no"> <meta name="format-detection" content="address=no"> <meta name="format-detection" content="email=no"> <style type="text/css"> a[x-apple-data-detectors] { color: inherit !important; text-decoration: none !important; font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; line-height: inherit !important; } </style>    
+    <title></title>
+    <!--[if (mso 16)]>
+    <style type="text/css">
+    a {text-decoration: none;}
+    </style>
+    <![endif]-->
+    <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
+    <!--[if !mso]><!-- -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <!--<![endif]-->
+</head>
+<body>
+    <div class="es-wrapper-color" style="width: 600px; margin: auto; display: block;">
+        
+        <table class="es-wrapper" width="600" align="center" cellspacing="0" cellpadding="0" background="" style="background-position: center top;">
+            <tbody>
+                <tr>
+                    <td class="esd-email-paddings" valign="top">
+                        <table cellpadding="0" cellspacing="0" class="es-content" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center">
+                                        <table class="es-content-body" style="background-color: #ffffff;" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center">
+                                            <tbody>
+                                              
+                                                <tr>
+                                                    <td class="esd-structure esd-checked" align="left">
+                                                        <table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame" width="600" valign="top" align="center">
+                                                                        <table style="border-radius: 10px; border-collapse: separate; background-color: #ffffff;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td  align="center" style=" background-color: #e76351";>
+                                                                                        <h1 style="color: #fff; line-height: 100%; font-family: arial, sans-serif;">Seja bem-vindo!</h1></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                  <td class="esd-block-text es-m-txt-c es-p10t es-p40r es-p40l" align="center" style="padding: 25px;">
+																					  <img src="https://cobra-banners.s3-sa-east-1.amazonaws.com/e-mail/boas-vindas/24h.jpg" width="50%" >
+																					   <p>&nbsp;</p>
+																					  	<p style="line-height: 150%; color: #333333; font-family: arial, sans-serif; font-size: 20px; text-decoration: none;">Olá, {!Receiving_User.FirstName}, seja bem-vindo a loja online da <strong>{!Community_Name}</strong>!</p>
+                                                                                      <p style="line-height: 150%; color: #333333; font-family: arial, sans-serif; font-size: 20px; text-decoration: none;">Preparamos tudo para que você tenha a melhor experiência em nosso site.</p>
+                                                                                      <p>&nbsp;</p>
+                                                                                    <p style="line-height: 150%; color: #333333; font-family: arial, sans-serif; font-size: 18px; text-decoration: none;"><em>Informação de usuário:</em></p>
+                                                                                    <p style="line-height: 150%; color: #333333; font-family: arial, sans-serif; font-size: 18px; text-decoration: none;">Nome de usuário: {!Receiving_User.Username}</p>
+                                                                                      <span style="display: block;"><a href="{!Community_Url}" target="_blank"><img src="https://cobra-banners.s3-sa-east-1.amazonaws.com/e-mail/boas-vindas/start.png" width="50%"></a></span>
+																					  <!-- <span style="display: block;"></span> -->
+																				  </td>
+																					
+																					
+                                                                              </tr>
+                                                                                <tr>
+                                                                                    <td align="center">
+                                                                                        <img src="https://cobra-banners.s3-sa-east-1.amazonaws.com/e-mail/boas-vindas/cobra-com-vc.jpg" width="50%">
+                                                                                    </td>
+                                                                              </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                       <table cellpadding="0" cellspacing="0" class="es-content" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center">
+                                        <table class="es-content-body" style="background-color: transparent;" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center">
+                                            <tbody>
+                                              
+                                                <tr>
+                                                    <td class="esd-structure esd-checked" style="background-image:url(https://tlr.stripocdn.email/content/guids/CABINET_70fd1d5e39bb615dfefb1587a3add58e/https://cobra-banners.s3-sa-east-1.amazonaws.com/e-mail/boas-vindas/77771525347133443.png);background-position: left top; background-repeat: repeat;" align="left">
+														<table cellpadding="0" cellspacing="0" width="100%">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame" width="600" valign="top" align="left">
+                                                                        <table style="border-radius: 10px; border-collapse: separate; background-color: #ffffff;" width="100%" cellspacing="0" cellpadding="0" bgcolor="#ffffff">
+                                                                            <tbody>
+                                                                                
+                                                                                <tr>
+                                                                                    <td width="50%" align="left" class="esd-block-text es-m-txt-c es-p10t es-p40r es-p40l" style="padding: 20px 20px;">
+                                                                                        <p style="line-height: 150%; color: #333333; font-family: arial, sans-serif; font-size: 15px; text-decoration: none;">Caso tenha alguma dúvida ou queira esclarecer algum assunto entre em contato com seu vendedor ou com o nosso SAC: 0800 16 3333</p>
+                                                                                    </td>
+																					
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+						  
+                        <table width="300" align="center" class="" cellspacing="0" cellpadding="0" style="width: 300px; margin: 10px auto;">
+                            <tbody>
+                                <tr>
+                                    <td class="es-p10r" valign="top" align="center"><a target="_blank" href="https://www.facebook.com/cobrarolamentos"><img title="Facebook" src="https://cobra-banners.s3-sa-east-1.amazonaws.com/e-mail/boas-vindas/fb.png" style="padding: 0 20px;"alt="Fb" width="30"></a></td>
+                                    <td class="es-p10r" valign="top" align="center"><a target="_blank" href="https://www.instagram.com/cobrarolamentos/"><img title="Instagram" src="https://cobra-banners.s3-sa-east-1.amazonaws.com/e-mail/boas-vindas/inst.png" style="padding: 0 20px;"alt="Yt" width="30"></a></td>
+                                    <td class="es-p10r" valign="top" align="center"><a target="_blank" href="http://www.linkedin.com/company/3065449?trk=prof-exp-company-name"><img title="Linkedin" src="https://cobra-banners.s3-sa-east-1.amazonaws.com/e-mail/boas-vindas/Ld.png" alt="In" width="30" style="padding: 0 20px;"></a></td>
+                                    <!-- <td valign="top" align="center"><br><br></td> -->
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <br />
+                        <br />
+
+                        <table class="esd-footer-popover es-content" cellspacing="0" cellpadding="0" align="center">
+                            <tbody>
+                                <tr>
+                                    <td class="esd-stripe" align="center">
+                                        <table class="es-content-body" style="background-color: transparent;" width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="esd-structure es-p30t es-p30b es-p20r es-p20l" align="left">
+                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="esd-container-frame" width="560" valign="top" align="center">
+                                                                        <table width="100%" cellspacing="0" cellpadding="0">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="esd-block-image es-infoblock made_with" align="center" style="font-size:0"><a target="_blank" href="{!Community_Url}"><img src="https://cobra-banners.s3-sa-east-1.amazonaws.com/e-mail/boas-vindas/Cobra.png" alt width="125"></a></td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>	
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_BillingAddr --></label>
+        <name>Tmpl_OrderConfirm_BillingAddr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_BuyerInfo --></label>
+        <name>Tmpl_OrderConfirm_BuyerInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_ColumnProduct --></label>
+        <name>Tmpl_OrderConfirm_ColumnProduct</name>
+    </customLabels>
+    <customLabels>
+        <label>Quantidade</label>
+        <name>Tmpl_OrderConfirm_ColumnQuantity</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_ColumnSinglePrice --></label>
+        <name>Tmpl_OrderConfirm_ColumnSinglePrice</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_ColumnTotal --></label>
+        <name>Tmpl_OrderConfirm_ColumnTotal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_CustomerNo --></label>
+        <name>Tmpl_OrderConfirm_CustomerNo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Date --></label>
+        <name>Tmpl_OrderConfirm_Date</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Dear --></label>
+        <name>Tmpl_OrderConfirm_Dear</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_FinalString --></label>
+        <name>Tmpl_OrderConfirm_FinalString</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_FirstStr --></label>
+        <name>Tmpl_OrderConfirm_FirstStr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Note --></label>
+        <name>Tmpl_OrderConfirm_Note</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Number --></label>
+        <name>Tmpl_OrderConfirm_Number</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_PaymentInfo --></label>
+        <name>Tmpl_OrderConfirm_PaymentInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_PaymentMethod --></label>
+        <name>Tmpl_OrderConfirm_PaymentMethod</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_PaymentNO --></label>
+        <name>Tmpl_OrderConfirm_PaymentNO</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_PaymentTerms --></label>
+        <name>Tmpl_OrderConfirm_PaymentTerms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Reference --></label>
+        <name>Tmpl_OrderConfirm_Reference</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_SKU --></label>
+        <name>Tmpl_OrderConfirm_SKU</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_SecondStr --></label>
+        <name>Tmpl_OrderConfirm_SecondStr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_ShipmentDeliveryDate --></label>
+        <name>Tmpl_OrderConfirm_ShipmentDeliveryDate</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_ShipmentInfo --></label>
+        <name>Tmpl_OrderConfirm_ShipmentInfo</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_ShipmentTerms --></label>
+        <name>Tmpl_OrderConfirm_ShipmentTerms</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_ShippingAddr --></label>
+        <name>Tmpl_OrderConfirm_ShippingAddr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Status --></label>
+        <name>Tmpl_OrderConfirm_Status</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_SubjectLine --></label>
+        <name>Tmpl_OrderConfirm_SubjectLine</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_TableLabel --></label>
+        <name>Tmpl_OrderConfirm_TableLabel</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Total_Shipping --></label>
+        <name>Tmpl_OrderConfirm_Total_Shipping</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Total_Subtotal --></label>
+        <name>Tmpl_OrderConfirm_Total_Subtotal</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Total_TaxesStr --></label>
+        <name>Tmpl_OrderConfirm_Total_TaxesStr</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Tmpl_OrderConfirm_Total_Total --></label>
+        <name>Tmpl_OrderConfirm_Total_Total</name>
+    </customLabels>
+</Translations>

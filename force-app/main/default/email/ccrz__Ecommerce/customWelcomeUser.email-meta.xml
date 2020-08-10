@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>custom template to welcome new users</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>customWelcomeUser</name>
+    <style>none</style>
+    <subject>{!Community_Name} - Bem-vindo, {!Receiving_User.FirstName}</subject>
+    <textOnly>Olá, {!Receiving_User.FirstName},
+
+Bem-vindo à {!Community_Name}! Para começar, acesse {!Community_Url}
+
+Nome do usuário: {!Receiving_User.Username}
+
+Obrigado,
+{!Organization.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

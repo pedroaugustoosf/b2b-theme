@@ -1,0 +1,8 @@
+<apex:page docType="html-5.0" sidebar="false" id="headerEndNew" showHeader="false" standardStylesheets="false" applyHtmlTag="false">
+    <!-- Begin Default Content REMOVE THIS -->
+    <c:osf_cc_headerRD />
+    <c:osf_MenuDesktopTemplate />
+
+
+    <!-- End Default Content REMOVE THIS -->
+</apex:page>

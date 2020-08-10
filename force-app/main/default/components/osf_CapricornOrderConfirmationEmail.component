@@ -1,0 +1,279 @@
+<apex:component access="global" controller="osf_OrderConfirmEmailCtrl" id="osf_CapricornOrderConfirmEmail">
+    <apex:attribute access="global" type="Id" name="order" assignTo="{!currentOrderId}" description="the relatedTo ccrz__E_Order__c"
+    />
+    <apex:repeat value="{!currentOrders}" var="currentOrder">
+        <table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px;">
+            <tbody>
+                <tr>
+                    <td style="padding: 20px;">
+                        <table cellpadding="0" cellspacing="0" width="100%">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding-top: 20px; padding-bottom: 20px; ">
+                                                        <span style="color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;" pardot-region="Editorialtext">
+                                                            <span>{!$Label.Tmpl_OrderConfirm_Dear} {!currentOrder.buyerFirstName}
+                                                                {!currentOrder.buyerLastName},
+                                                            </span>
+                                                            <br/>
+                                                            <br/>
+                                                            <span>
+                                                                <apex:outputText value="{!$Label.Tmpl_OrderConfirm_FirstStr}" escape="false" />
+                                                            </span>
+                                                            <br/>
+                                                            <br/>
+                                                            <span>{!$Label.Tmpl_OrderConfirm_Number}:
+                                                                <strong>{!currentOrder.orderNumber}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <span>{!$Label.Tmpl_OrderConfirm_Status}:
+                                                                <strong>{!currentOrder.statusName}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <span>{!$Label.Tmpl_OrderConfirm_Date}:
+                                                                <strong>{!currentOrder.orderDate}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <br/>
+                                                            <span>
+                                                                <apex:outputText value="{!$Label.Tmpl_OrderConfirm_SecondStr}" escape="false" />
+                                                            </span>
+                                                            <br/>
+                                                            <br/>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table bgcolor="#f6f6f6" cellpadding="0" cellspacing="0" width="100%" style="margin: 0px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" width="50%">
+                                                        <div style="padding: 10px 15px;">
+                                                            <span style="color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_BuyerInfo}</strong>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td valign="top" width="50%">
+                                                        <div style="padding: 10px 15px; color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                            <span>{!currentOrder.buyerFirstName} {!currentOrder.buyerLastName}</span>
+                                                            <br/>
+                                                            <span>({!currentOrder.buyerEmail})</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <br/>
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" width="100%">
+                                                        <div style="padding: 10px 8px;">
+                                                            <span style="color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_TableLabel}</strong>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" width="100%" style="padding: 5px;">
+                                                        <table width="100%" style="font-size: 12px;">
+                                                            <thead width="100%" valign="center">
+                                                                <tr>
+                                                                    <th width="30%" style="text-align: left;font-family: Arial,Helvetica,sans-serif; font-size: 14px; border-bottom: 1px solid #DEDEDE; padding: 0px; color: #878798;">{!$Label.Tmpl_OrderConfirm_ColumnProduct}</th>
+                                                                    <th width="10%" style="text-align: center;font-family: Arial,Helvetica,sans-serif; font-size: 14px; border-bottom: 1px solid #DEDEDE; padding: 0px; color: #878798;">{!$Label.Tmpl_OrderConfirm_ColumnQuantity}</th>
+                                                                    <th width="30%" style="text-align: right;font-family: Arial,Helvetica,sans-serif; font-size: 14px; border-bottom: 1px solid #DEDEDE; padding-right: 5px; color: #878798;">{!$Label.Tmpl_OrderConfirm_ColumnSinglePrice}</th>
+                                                                    <th width="30%" style="text-align: right;font-family: Arial,Helvetica,sans-serif; font-size: 14px; border-bottom: 1px solid #DEDEDE; padding-right: 5px; color: #878798;">{!$Label.Tmpl_OrderConfirm_ColumnTotal}</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody width="100%" valign="center">
+                                                                <apex:repeat value="{!currentOrder.orderItems}" var="orderItem">
+                                                                    <tr>
+                                                                        <td width="30%" style="text-align: left; padding-top: 5px; padding-bottom: 5px;">
+                                                                            <span style="text-transform: uppercase; color: #d80212;">{!orderItem.productName}</span>
+                                                                            <br/>
+                                                                            <span style="color: #878798;font-family: Arial,Helvetica,sans-serif; font-size: 11px;">{!orderItem.productSKU}</span>
+                                                                        </td>
+                                                                        <td width="10%" style="text-align: center; font-family: Arial,Helvetica,sans-serif; font-size: 14px;padding-top: 5px; padding-bottom: 5px; color: #d80212;">{!orderItem.quantity}</td>
+                                                                        <td width="30%" style="text-align: right; font-family: Arial,Helvetica,sans-serif; font-size: 14px;padding-top: 5px; padding-bottom: 5px; padding-right: 5px; color: #d80212;">{!orderItem.price}</td>
+                                                                        <td width="30%" style="text-align: right; font-family: Arial,Helvetica,sans-serif; font-size: 14px;padding-top: 5px; padding-bottom: 5px; padding-right: 5px; color: #d80212;">{!orderItem.itemTotal}</td>
+                                                                    </tr>
+                                                                </apex:repeat>
+                                                            </tbody>
+                                                            <tfoot>
+                                                                <tr>
+                                                                    <td colspan="3" style="text-align: right; color: rgb(0, 0, 0);">
+                                                                        <span style="font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                                            <strong>{!$Label.Tmpl_OrderConfirm_Total_Subtotal}</strong>
+                                                                        </span>
+                                                                        <br/>
+                                                                    </td>
+                                                                    <td width="30%" style="text-align: right; padding-right: 5px; color: #d80212;font-family: Arial,Helvetica,sans-serif; font-size: 14px;">{!currentOrder.subTotalAmount}</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <apex:outputText rendered="{!currentOrder.showTaxesCost}">
+                                                                        <td colspan="3" style="text-align: right; color: rgb(0, 0, 0);">
+                                                                            <span style="font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                                                <strong>{!$Label.Tmpl_OrderConfirm_Total_TaxesStr}</strong>
+                                                                            </span>
+                                                                        </td>
+                                                                        <td width="30%" style="text-align: right;font-family: Arial,Helvetica,sans-serif; font-size: 14px; padding-right: 5px; color: #d80212;">{!currentOrder.taxAmount}</td>
+                                                                    </apex:outputText>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <apex:outputText rendered="{!currentOrder.showShippingCost}">
+                                                                        <td colspan="3" style="text-align: right; color: rgb(0, 0, 0);">
+                                                                            <span style="font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                                                <strong>{!$Label.Tmpl_OrderConfirm_Total_Shipping}</strong>
+                                                                            </span>
+                                                                        </td>
+                                                                        <td width="30%" style="text-align: right; font-family: Arial,Helvetica,sans-serif; font-size: 14px;padding-right: 5px; color: #d80212;">{!currentOrder.shippingAmount}</td>
+                                                                    </apex:outputText>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td colspan="3" style="text-align: right; color: rgb(0, 0, 0);">
+                                                                        <span style="font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                                            <strong>{!$Label.Tmpl_OrderConfirm_Total_Total}</strong>
+                                                                        </span>
+                                                                        <br/>
+                                                                    </td>
+                                                                    <td width="30%" style="text-align: right;font-family: Arial,Helvetica,sans-serif; font-size: 14px; padding-right: 5px; color: #d80212;">{!currentOrder.totalAmount}</td>
+                                                                </tr>
+
+                                                            </tfoot>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <br/>
+                                        <table cellpadding="0" cellspacing="10" width="100%" style="margin: 0px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td valign="top" width="50%" style="background-color: #f2f2f2;">
+                                                        <div style="padding: 10px 15px; color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                            <span>
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_BillingAddr}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <br/>
+                                                            <span>{!currentOrder.billingAddress1}</span>
+                                                            <br/>
+                                                            <div style="display:{!IF(currentOrder.billingAddress2 == '', 'none', 'block')}">
+                                                                <span>{!currentOrder.billingAddress2}</span>
+                                                                <br/>
+                                                            </div>
+                                                            <div style="display:{!IF(currentOrder.billingAddress3 == '', 'none', 'block')}">
+                                                                <span>{!currentOrder.billingAddress3}</span>
+                                                                <br/>
+                                                            </div>
+                                                            <span>{!currentOrder.billingCity}&#44;</span>
+                                                            <span>{!currentOrder.billingPostalCode}</span>
+                                                            <span>{!IF (currentOrder.billingState != '', ', ' + currentOrder.billingState,
+                                                                '')}
+                                                            </span>
+                                                            <br/>
+                                                            <span>{!currentOrder.billingCountry}</span>
+                                                        </div>
+                                                    </td>
+                                                    <td valign="top" width="50%" style="background-color: #f2f2f2;">
+                                                        <div style="padding: 10px 15px; color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                            <span>
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_ShippingAddr}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <br/>
+                                                            <span>{!currentOrder.shippingAddress1}</span>
+                                                            <br/>
+                                                            <div style="display:{!IF(currentOrder.shippingAddress2 == '', 'none', 'block')}">
+                                                                <span>{!currentOrder.shippingAddress2}</span>
+                                                                <br/>
+                                                            </div>
+                                                            <div style="display:{!IF(currentOrder.shippingAddress3 == '', 'none', 'block')}">
+                                                                <span>{!currentOrder.shippingAddress3}</span>
+                                                                <br/>
+                                                            </div>
+                                                            <span>{!currentOrder.shippingCity}&#44;</span>
+                                                            <span>{!currentOrder.shippingPostalCode}</span>
+                                                            <span>{!IF (currentOrder.shippingState != '', ', ' + currentOrder.shippingState,
+                                                                '')}
+                                                            </span>
+                                                            <br/>
+                                                            <span>{!currentOrder.shippingCountry}</span>
+                                                            <br/>
+                                                            <span>{!currentOrder.shippingLocationType}</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td valign="top" width="50%" style="background-color: #f2f2f2;">
+                                                        <div style="padding: 10px 15px; color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                            <span>
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_PaymentInfo}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <span>
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_PaymentMethod}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <span>{!currentOrder.paymentConditionName}</span>
+                                                            <br/>
+                                                            <br/>
+                                                        </div>
+                                                    </td>
+                                                    <td valign="top" width="50%" style="background-color: #f2f2f2;">
+                                                        <div style="padding: 10px 15px; color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                            <span>
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_ShipmentInfo}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <span>
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_ShipmentTerms}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <span>{!currentOrder.shippMethod}</span>
+                                                            <br/>
+                                                            <br/>
+                                                            <span>
+                                                                <strong>{!$Label.Tmpl_OrderConfirm_Note}</strong>
+                                                            </span>
+                                                            <br/>
+                                                            <span>{!currentOrder.ordernote}</span>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <table cellpadding="0" cellspacing="0" width="100%" style="margin: 0px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td style="padding-top: 20px; padding-bottom: 20px;">
+                                                        <span style="color: rgb(0, 0, 0); line-height: 1.5; font-family: Arial,Helvetica,sans-serif; font-size: 14px;">
+                                                            <span>
+                                                                <apex:outputText value="{!$Label.Tmpl_OrderConfirm_FinalString}" escape="false" />
+                                                            </span>
+                                                            <br/>
+                                                            <br/>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </apex:repeat>
+</apex:component>
